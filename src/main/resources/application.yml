@@ -1,0 +1,18 @@
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5433/cardealer?schema=public
+    username: car_user
+    password: P@ssw0rd123
+
+  # CORS configuration
+  web:
+    cors:
+      allowed-origins: ${ALLOWED_ORIGINS:http://localhost:5173}
+      allowed-methods: GET, POST, PUT, DELETE, OPTIONS
+      allowed-headers: "*"
+      allow-credentials: true
+
+#logging:
+#  level:
+#    org.springframework.web: DEBUG
+#    org.springframework.data.r2dbc: DEBUG
